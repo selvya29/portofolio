@@ -1,0 +1,439 @@
+<!DOCTYPE html><html class="light" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport">
+<title>Selvya Mulyaningtyas | About Me</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-container": "#c6b9be",
+                      "on-tertiary": "#ffffff",
+                      "secondary-fixed-dim": "#ffb1c1",
+                      "on-secondary-fixed": "#3f0017",
+                      "inverse-primary": "#ffb1c3",
+                      "surface-tint": "#894c5c",
+                      "tertiary": "#665c60",
+                      "primary": "#894c5c",
+                      "hover-rose": "#D4607A",
+                      "on-primary-fixed": "#380a1a",
+                      "on-error-container": "#93000a",
+                      "secondary": "#984258",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#eddfe4",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-container": "#fd94ac",
+                      "on-secondary-container": "#782a40",
+                      "light-pink-border": "#FADDE1",
+                      "outline": "#847376",
+                      "inverse-on-surface": "#f3f0f0",
+                      "surface-dim": "#dcd9d9",
+                      "tertiary-fixed-dim": "#d1c3c8",
+                      "warm-gray": "#7A7A7A",
+                      "on-surface": "#1b1c1c",
+                      "on-error": "#ffffff",
+                      "surface-container-low": "#f6f3f2",
+                      "outline-variant": "#d6c1c5",
+                      "on-primary-container": "#733949",
+                      "on-secondary-fixed-variant": "#7a2b41",
+                      "surface-container-highest": "#e4e2e1",
+                      "on-tertiary-fixed": "#211a1d",
+                      "surface": "#fcf9f8",
+                      "on-primary-fixed-variant": "#6e3545",
+                      "background": "#fcf9f8",
+                      "surface-container": "#f0eded",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed": "#ffd9df",
+                      "primary-fixed-dim": "#ffb1c3",
+                      "primary-fixed": "#ffd9e0",
+                      "on-background": "#1b1c1c",
+                      "primary-container": "#f4a7b9",
+                      "inverse-surface": "#303030",
+                      "on-tertiary-fixed-variant": "#4e4448",
+                      "on-secondary": "#ffffff",
+                      "surface-container-high": "#eae7e7",
+                      "error": "#ba1a1a",
+                      "on-surface-variant": "#524346",
+                      "surface-bright": "#fcf9f8",
+                      "on-tertiary-container": "#53494d",
+                      "surface-variant": "#e4e2e1",
+                      "surface-white": "#FFFFFF"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "stack-gap": "1rem",
+                      "section-padding-mobile": "64px",
+                      "section-padding-desktop": "120px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-xl": ["Playfair Display"],
+                      "headline-lg": ["Playfair Display"],
+                      "label-sm": ["Inter"],
+                      "headline-xl-mobile": ["Playfair Display"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["44px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "label-sm": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-xl-mobile": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            background-color: #fcf9f8;
+            color: #1b1c1c;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(250, 221, 225, 0.5);
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        .lang-btn:hover .lang-indicator {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- Mobile Header -->
+<header class="md:hidden fixed top-0 left-0 right-0 z-50 glass-card border-b border-light-pink-border">
+<div class="flex items-center justify-between px-4 py-3">
+<a href="index.html" class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">face</span>
+<span class="font-headline-md text-headline-md text-primary">Selvya</span>
+</a>
+<button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-light-pink-border/30 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">menu</span>
+</button>
+</div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobileMenuOverlay" class="md:hidden fixed inset-0 z-40 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300" onclick="toggleMobileMenu()"></div>
+
+<!-- Mobile Menu Drawer -->
+<div id="mobileMenuDrawer" class="md:hidden fixed right-0 top-0 bottom-0 w-72 bg-surface-white z-50 transform translate-x-full transition-transform duration-300 shadow-2xl">
+<div class="flex flex-col p-6">
+<div class="flex items-center justify-between mb-8">
+<span class="font-headline-md text-headline-md text-primary">Menu</span>
+<button onclick="toggleMobileMenu()" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-light-pink-border/30 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-body-lg text-body-lg">Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary-container text-on-primary-container" href="about.html">
+<span class="material-symbols-outlined">person</span>
+<span class="font-body-lg text-body-lg">About</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="experience.html">
+<span class="material-symbols-outlined">work</span>
+<span class="font-body-lg text-body-lg">Experience</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="projects.html">
+<span class="material-symbols-outlined">code</span>
+<span class="font-body-lg text-body-lg">Projects</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="skills.html">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-body-lg text-body-lg">Skills</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="contact.html">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-body-lg text-body-lg">Contact</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-light-pink-border">
+<button id="mobileLangToggle" onclick="toggleLanguage(); toggleMobileMenu();" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors w-full">
+<span class="material-symbols-outlined">translate</span>
+<span class="font-body-lg text-body-lg">Language:<span id="mobileLangIndicator">ID</span></span>
+</button>
+</div>
+</div>
+</div>
+
+<!-- Fixed Side Navigation (Desktop Only) -->
+<nav class="hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 flex flex-col items-center py-4 px-3 glass-card rounded-full shadow-lg z-50 border border-light-pink-border">
+<div class="flex flex-col items-center gap-3">
+<!-- Language Toggle Button -->
+<button id="langToggle" onclick="toggleLanguage()" class="lang-btn relative flex items-center justify-center w-10 h-10 rounded-full bg-primary-container text-on-primary-container transition-all duration-300 hover:scale-110 hover:bg-primary hover:text-white" title="Switch Language">
+<span class="material-symbols-outlined text-lg">translate</span>
+<span id="langIndicator" class="lang-indicator absolute -bottom-1 -right-1 text-[8px] font-bold bg-primary text-white w-5 h-5 rounded-full flex items-center justify-center transition-transform">ID</span>
+</button>
+
+<!-- Navigation Cluster -->
+<div class="flex flex-col gap-5">
+<!-- Home -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-200 hover:scale-110 rounded-full" href="index.html">
+<span class="material-symbols-outlined text-2xl">home</span>
+</a>
+<!-- About (Active) -->
+<a class="flex items-center justify-center w-10 h-10 rounded-full bg-primary-container text-on-primary-container transition-all duration-300 scale-95 active-nav" href="about.html">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">person</span>
+</a>
+<!-- Experience -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-200 hover:scale-110 rounded-full" href="experience.html">
+<span class="material-symbols-outlined text-2xl">work</span>
+</a>
+<!-- Projects -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-200 hover:scale-110 rounded-full" href="projects.html">
+<span class="material-symbols-outlined text-2xl">code</span>
+</a>
+<!-- Skills -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-200 hover:scale-110 rounded-full" href="skills.html">
+<span class="material-symbols-outlined text-2xl">analytics</span>
+</a>
+<!-- Contact -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-200 hover:scale-110 rounded-full mt-2" href="contact.html">
+<span class="material-symbols-outlined text-2xl">mail</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="ml-0 md:ml-24 min-h-screen pt-20 md:pt-0">
+<!-- Hero / About Section -->
+<section class="max-w-container-max mx-auto px-4 md:px-gutter py-16 md:py-section-padding-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<!-- Left: Profile Illustration/Image -->
+<div class="md:col-span-5 relative group">
+<div class="absolute -inset-4 bg-primary-container/20 rounded-[2rem] blur-2xl transform group-hover:scale-105 transition-transform duration-500"></div>
+<div class="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-[20px_20px_60px_rgba(244,167,185,0.25)] border-4 border-surface-white">
+<img class="w-full h-full object-cover" src="assets/images/sel1.jpeg">
+</div>
+<!-- Decorative Element -->
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary-container rounded-full flex items-center justify-center shadow-lg border-4 border-surface-white">
+<span class="material-symbols-outlined text-on-secondary-container text-4xl">code</span>
+</div>
+</div>
+<!-- Right: Detailed About Me Text -->
+<div class="md:col-span-7 space-y-stack-gap">
+<span class="font-label-sm text-label-sm text-primary tracking-widest uppercase" data-i18n="about_label">Engineer & Analyst</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-4" data-i18n="about_title">Selvya Mulyaningtyas</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed" data-i18n="about_desc">
+A Software Engineer and Data Analyst with a strong interest in application development and data analysis. Experienced in developing web-based systems and performing data analysis to support decision-making processes. Possesses strong problem-solving and analytical thinking skills, and is always eager to learn, grow, and take on new challenges in the field of technology.
+</p>
+<!-- Info Grid (Bento Style) -->
+<div class="grid grid-cols-2 gap-4 mt-8">
+<!-- University Card -->
+<div class="glass-card p-6 rounded-2xl flex flex-col gap-2 hover:translate-y-[-4px] transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-3xl">school</span>
+<h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="about_university">University</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Universitas Muhammadiyah Cirebon (UMC)</p>
+</div>
+<!-- GPA card -->
+<div class="glass-card p-6 rounded-2xl flex flex-col gap-2 hover:translate-y-[-4px] transition-transform duration-300">
+<span class="material-symbols-outlined text-secondary text-3xl">grade</span>
+<h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="about_gpa">GPA 3.85</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="about_gpa_desc">Consistent academic high-achiever</p>
+</div>
+<!-- Location Card -->
+<div class="glass-card p-6 rounded-2xl flex flex-col gap-2 hover:translate-y-[-4px] transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="about_location">Location</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Cirebon, West Java, Indonesia</p>
+</div>
+<!-- Achievement Card -->
+<div class="glass-card p-6 rounded-2xl flex flex-col gap-2 hover:translate-y-[-4px] transition-transform duration-300">
+<span class="material-symbols-outlined text-secondary text-3xl">military_tech</span>
+<h3 class="font-headline-md text-headline-md text-on-surface" data-i18n="about_achievement">Achievement</h3>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="about_achievement_desc">Outstanding Graduates from Faculty of Technic</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience & Organizational Involvement -->
+<section class="bg-surface-container-low py-16 md:py-section-padding-desktop">
+<div class="max-w-container-max mx-auto px-4 md:px-gutter">
+<div class="flex flex-col md:flex-row gap-8 md:gap-12">
+<div class="md:w-1/3">
+<h2 class="font-headline-lg text-headline-lg text-on-surface" data-i18n="about_org_title">Organizational Leadership</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4" data-i18n="about_org_desc">
+Beyond technical skills, I actively participate in academic communities to drive innovation and collaboration.
+</p>
+</div>
+<div class="md:w-2/3 space-y-6">
+<!-- Experience Card 1 -->
+<div class="bg-surface-white p-8 rounded-2xl shadow-[4px_4px_20px_rgba(244,167,185,0.1)] border-l-4 border-primary relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl">groups</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface" data-i18n="about_bem_title">BEM (Badan Eksekutif Mahasiswa)</h4>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-1 mb-4" data-i18n="about_bem_role_1">Secretary</p>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="about_bem_desc_1">
+In the second period, I joined the core members of the daily management board as secretary who was fully responsible for the secretarial administration aspects of the organization including letter files, regulations, permits and other archival documentation, and meeting time management.
+</p>
+</div>
+<div class="bg-surface-white p-8 rounded-2xl shadow-[4px_4px_20px_rgba(244,167,185,0.1)] border-l-4 border-primary relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl">groups</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface" data-i18n="about_bem_title">BEM (Badan Eksekutif Mahasiswa)</h4>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-1 mb-4" data-i18n="about_bem_role_2">PSDM</p>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="about_bem_desc_2">
+During my first term, I served as a staff member in the Community Resource Development Division, where I was responsible for managing, training, and enhancing the capabilities of all members within the organization.
+</p>
+</div>
+<!-- Experience Card 2 -->
+<div class="bg-surface-white p-8 rounded-2xl shadow-[4px_4px_20px_rgba(244,167,185,0.1)] border-l-4 border-secondary relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl">groups</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface" data-i18n="about_himas_title">Himasantika</h4>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-1 mb-4" data-i18n="about_himas_role">Deputy Treasurer</p>
+<p class="font-body-md text-body-md text-on-surface-variant" data-i18n="about_himas_desc">
+In Himasantika, I served as deputy treasurer of daily management, in charge of managing the association's finances.
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Skill Chips Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-padding-desktop">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface" data-i18n="about_tech_title">Tech Stack</h2>
+</div>
+<div class="flex flex-wrap justify-center gap-4">
+<span class="px-6 py-2 rounded-full border border-light-pink-border bg-surface-white text-secondary font-label-sm shadow-sm hover:bg-secondary-fixed transition-colors">Python</span>
+<span class="px-6 py-2 rounded-full border border-light-pink-border bg-surface-white text-secondary font-label-sm shadow-sm hover:bg-secondary-fixed transition-colors">TensorFlow</span>
+<span class="px-6 py-2 rounded-full border border-light-pink-border bg-surface-white text-secondary font-label-sm shadow-sm hover:bg-secondary-fixed transition-colors">SQL & Databases</span>
+<span class="px-6 py-2 rounded-full border border-light-pink-border bg-surface-white text-secondary font-label-sm shadow-sm hover:bg-secondary-fixed transition-colors">JavaScript</span>
+<span class="px-6 py-2 rounded-full border border-light-pink-border bg-surface-white text-secondary font-label-sm shadow-sm hover:bg-secondary-fixed transition-colors">Data Visualization</span>
+<span class="px-6 py-2 rounded-full border border-light-pink-border bg-surface-white text-secondary font-label-sm shadow-sm hover:bg-secondary-fixed transition-colors">PHP</span>
+<span class="px-6 py-2 rounded-full border border-light-pink-border bg-surface-white text-secondary font-label-sm shadow-sm hover:bg-secondary-fixed transition-colors">HTML</span>
+</div>
+</div>
+</section>
+</main>
+<script src="js/i18n.js"></script>
+<script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobileMenuOverlay');
+            const drawer = document.getElementById('mobileMenuDrawer');
+
+            if (overlay.classList.contains('opacity-0')) {
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                overlay.classList.add('opacity-100');
+                drawer.classList.remove('translate-x-full');
+                drawer.classList.add('translate-x-0');
+                document.body.style.overflow = 'hidden';
+            } else {
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                overlay.classList.remove('opacity-100');
+                drawer.classList.add('translate-x-full');
+                drawer.classList.remove('translate-x-0');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function updateMobileLangIndicator() {
+            const lang = localStorage.getItem('lang') || 'id';
+            const indicator = document.getElementById('mobileLangIndicator');
+            if (indicator) {
+                indicator.textContent = lang.toUpperCase();
+            }
+        }
+
+        window.addEventListener('languageChanged', () => {
+            updateMobileLangIndicator();
+        });
+
+        document.addEventListener('DOMContentLoaded', updateMobileLangIndicator);
+
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+<style>
+        @media (max-width: 767px) {
+            .font-headline-xl {
+                font-size: 32px !important;
+                line-height: 1.15 !important;
+            }
+            .text-headline-xl {
+                font-size: 32px !important;
+            }
+            .text-headline-lg {
+                font-size: 26px !important;
+            }
+            .font-headline-lg {
+                font-size: 26px !important;
+            }
+            .text-headline-md {
+                font-size: 18px !important;
+            }
+            .font-headline-md {
+                font-size: 18px !important;
+            }
+            .text-body-lg {
+                font-size: 15px !important;
+            }
+            .font-body-lg {
+                font-size: 15px !important;
+            }
+            .text-body-md {
+                font-size: 14px !important;
+            }
+            .font-body-md {
+                font-size: 14px !important;
+            }
+            .grid-cols-2 {
+                grid-template-columns: 1fr !important;
+            }
+            .p-6, .p-8 {
+                padding: 1rem !important;
+            }
+        }
+        html {
+            overflow-x: hidden;
+        }
+        @media (max-width: 767px) {
+            button, a, .btn {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+    </style>
+</body></html>

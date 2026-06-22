@@ -1,0 +1,404 @@
+<!DOCTYPE html><html class="light" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Playfair+Display:wght@100..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#c6b9be",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#ffb1c1",
+                    "on-secondary-fixed": "#3f0017",
+                    "inverse-primary": "#ffb1c3",
+                    "surface-tint": "#894c5c",
+                    "tertiary": "#665c60",
+                    "primary": "#894c5c",
+                    "hover-rose": "#D4607A",
+                    "on-primary-fixed": "#380a1a",
+                    "on-error-container": "#93000a",
+                    "secondary": "#984258",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#eddfe4",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#fd94ac",
+                    "on-secondary-container": "#782a40",
+                    "light-pink-border": "#FADDE1",
+                    "outline": "#847376",
+                    "inverse-on-surface": "#f3f0f0",
+                    "surface-dim": "#dcd9d9",
+                    "tertiary-fixed-dim": "#d1c3c8",
+                    "warm-gray": "#7A7A7A",
+                    "on-surface": "#1b1c1c",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f6f3f2",
+                    "outline-variant": "#d6c1c5",
+                    "on-primary-container": "#733949",
+                    "on-secondary-fixed-variant": "#7a2b41",
+                    "surface-container-highest": "#e4e2e1",
+                    "on-tertiary-fixed": "#211a1d",
+                    "surface": "#fcf9f8",
+                    "on-primary-fixed-variant": "#6e3545",
+                    "background": "#fcf9f8",
+                    "surface-container": "#f0eded",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#ffd9df",
+                    "primary-fixed-dim": "#ffb1c3",
+                    "primary-fixed": "#ffd9e0",
+                    "on-background": "#1b1c1c",
+                    "primary-container": "#f4a7b9",
+                    "inverse-surface": "#303030",
+                    "on-tertiary-fixed-variant": "#4e4448",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#524346",
+                    "surface-bright": "#fcf9f8",
+                    "on-tertiary-container": "#53494d",
+                    "surface-variant": "#e4e2e1",
+                    "surface-white": "#FFFFFF"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "stack-gap": "1rem",
+                    "section-padding-mobile": "64px",
+                    "section-padding-desktop": "120px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "label-sm": ["Inter"],
+                    "headline-xl-mobile": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "headline-lg": ["44px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                    "label-sm": ["14px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                    "headline-xl-mobile": ["48px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                    "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                    "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                    "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f8;
+            color: #1b1c1c;
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 240, 245, 0.8);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(244, 167, 185, 0.25);
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .lang-btn:hover .lang-indicator {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- Mobile Header -->
+<header class="md:hidden fixed top-0 left-0 right-0 z-50 glass-nav border-b border-light-pink-border">
+<div class="flex items-center justify-between px-4 py-3">
+<a href="index.html" class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">face</span>
+<span class="font-headline-md text-headline-md text-primary">Selvya</span>
+</a>
+<button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-light-pink-border/30 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">menu</span>
+</button>
+</div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobileMenuOverlay" class="md:hidden fixed inset-0 z-40 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300" onclick="toggleMobileMenu()"></div>
+
+<!-- Mobile Menu Drawer -->
+<div id="mobileMenuDrawer" class="md:hidden fixed right-0 top-0 bottom-0 w-72 bg-surface-white z-50 transform translate-x-full transition-transform duration-300 shadow-2xl">
+<div class="flex flex-col p-6">
+<div class="flex items-center justify-between mb-8">
+<span class="font-headline-md text-headline-md text-primary">Menu</span>
+<button onclick="toggleMobileMenu()" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-light-pink-border/30 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-body-lg text-body-lg">Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="about.html">
+<span class="material-symbols-outlined">person</span>
+<span class="font-body-lg text-body-lg">About</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="experience.html">
+<span class="material-symbols-outlined">work</span>
+<span class="font-body-lg text-body-lg">Experience</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="projects.html">
+<span class="material-symbols-outlined">code</span>
+<span class="font-body-lg text-body-lg">Projects</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="skills.html">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-body-lg text-body-lg">Skills</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary-container text-on-primary-container" href="contact.html">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-body-lg text-body-lg">Contact</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-light-pink-border">
+<button id="mobileLangToggle" onclick="toggleLanguage(); toggleMobileMenu();" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors w-full">
+<span class="material-symbols-outlined">translate</span>
+<span class="font-body-lg text-body-lg">Language:<span id="mobileLangIndicator">ID</span></span>
+</button>
+</div>
+</div>
+</div>
+
+<!-- Fixed Side Navigation (Desktop Only) -->
+<aside class="hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 flex flex-col items-center py-4 px-3 bg-surface/80 backdrop-blur-md border border-light-pink-border rounded-full shadow-lg z-50">
+<div class="flex flex-col items-center gap-3">
+<!-- Language Toggle Button -->
+<button id="langToggle" onclick="toggleLanguage()" class="lang-btn relative flex items-center justify-center w-10 h-10 rounded-full bg-primary-container text-on-primary-container transition-all duration-300 hover:scale-110 hover:bg-primary hover:text-white" title="Switch Language">
+<span class="material-symbols-outlined text-lg">translate</span>
+<span id="langIndicator" class="lang-indicator absolute -bottom-1 -right-1 text-[8px] font-bold bg-primary text-white w-5 h-5 rounded-full flex items-center justify-center transition-transform">ID</span>
+</button>
+
+<div class="flex flex-col gap-5">
+<!-- Home -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-300" href="index.html">
+<span class="material-symbols-outlined">home</span>
+</a>
+<!-- About -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-300" href="about.html">
+<span class="material-symbols-outlined">person</span>
+</a>
+<!-- Experience -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-300" href="experience.html">
+<span class="material-symbols-outlined">work</span>
+</a>
+<!-- Projects -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-300" href="projects.html">
+<span class="material-symbols-outlined">code</span>
+</a>
+<!-- Skills -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-300" href="skills.html">
+<span class="material-symbols-outlined">analytics</span>
+</a>
+<!-- Contact (Active) -->
+<a class="flex items-center justify-center w-10 h-10 rounded-full bg-primary-container text-on-primary-container transition-all duration-300" href="contact.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">mail</span>
+</a>
+</div>
+</div>
+</aside>
+<main class="ml-0 md:ml-20 min-h-screen flex flex-col justify-center items-center px-4 md:px-24 py-16 md:py-section-padding-desktop relative pt-24 md:pt-12">
+<!-- Atmospheric Background Element -->
+<div class="absolute top-1/4 -right-20 w-96 h-96 bg-primary-container/20 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute bottom-1/4 -left-20 w-80 h-80 bg-secondary-container/10 rounded-full blur-[80px] pointer-events-none"></div>
+<div class="max-w-4xl w-full text-center z-10">
+<!-- Heading -->
+<h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-primary tracking-tight mt-8 md:mt-0" data-i18n="contact_title">
+                Mari Terhubung
+            </h1>
+<!-- Central Email Section -->
+<div class="mt-8 md:mt-10 group">
+<p class="text-lg text-warm-gray tracking-[0.2em] uppercase" data-i18n="contact_email_label">Email Utama</p>
+<a class="text-xl md:text-2xl text-on-surface-variant hover:text-primary transition-all duration-500 block break-words px-4 mt-3" href="mailto:selvyamulyaningtyasdwijayanti@gmail.com">
+                    selvyamulyaningtyasdwijayanti@gmail.com
+                </a>
+<div class="h-1 w-24 bg-primary-container mx-auto mt-4 rounded-full group-hover:w-48 transition-all duration-700 ease-out"></div>
+</div>
+<!-- Social/Link Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-3xl mx-auto">
+<!-- LinkedIn Card -->
+<a class="group relative flex flex-col items-center justify-center p-8 bg-surface-white rounded-[32px] shadow-[0_20px_40px_rgba(244,167,185,0.1)] hover:shadow-[0_25px_50px_rgba(244,167,185,0.2)] transition-all duration-500 hover:-translate-y-2 border border-light-pink-border/30" href="https://www.linkedin.com/in/selvya-mulyaningtyas-dwi-jayanti-778ba2190?utm_source=share_via&utm_content=profile&utm_medium=member_ios">
+<div class="w-14 h-14 rounded-full bg-secondary-container/20 flex items-center justify-center mb-4 text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-2xl">work</span>
+</div>
+<span class="font-headline-md text-on-surface mb-2" data-i18n="contact_linkedin">LinkedIn</span>
+<span class="font-body-md text-warm-gray" data-i18n="contact_linkedin_desc">Professional Network</span>
+</a>
+<!-- GitHub Card -->
+<a class="group relative flex flex-col items-center justify-center p-8 bg-surface-white rounded-[32px] shadow-[0_20px_40px_rgba(244,167,185,0.1)] hover:shadow-[0_25px_50px_rgba(244,167,185,0.2)] transition-all duration-500 hover:-translate-y-2 border border-light-pink-border/30" href="https://github.com/selvya29">
+<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-2xl">code</span>
+</div>
+<span class="font-headline-md text-on-surface mb-2" data-i18n="contact_github">GitHub</span>
+<span class="font-body-md text-warm-gray" data-i18n="contact_github_desc">Source Code</span>
+</a>
+<!-- WhatsApp Card -->
+<a class="group relative flex flex-col items-center justify-center p-8 bg-surface-white rounded-[32px] shadow-[0_20px_40px_rgba(244,167,185,0.1)] hover:shadow-[0_25px_50px_rgba(244,167,185,0.2)] transition-all duration-500 hover:-translate-y-2 border border-light-pink-border/30" href="https://wa.me/message/FJDAISJPA3QKI1">
+<div class="w-14 h-14 rounded-full bg-secondary-container/20 flex items-center justify-center mb-4 text-secondary group-hover:bg-secondary group-hover:text-on-secondary transition-colors duration-300">
+<span class="material-symbols-outlined text-2xl">chat</span>
+</div>
+<span class="font-headline-md text-on-surface mb-2" data-i18n="contact_whatsapp">WhatsApp</span>
+<span class="font-body-md text-warm-gray" data-i18n="contact_whatsapp_desc">Direct Message</span>
+</a>
+</div>
+<!-- Instagram Card -->
+<div class="mt-8 w-full max-w-3xl mx-auto">
+<a class="group relative flex flex-col items-center justify-center p-8 bg-surface-white rounded-[32px] shadow-[0_20px_40px_rgba(244,167,185,0.1)] hover:shadow-[0_25px_50px_rgba(244,167,185,0.2)] transition-all duration-500 hover:-translate-y-2 border border-light-pink-border/30" href="https://www.instagram.com/viya.aaa29?igsh=MWIwaDBjaDY1cnlrNQ%3D%3D&utm_source=qr">
+<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center mb-4 text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors duration-300">
+<span class="material-symbols-outlined text-2xl">photo_camera</span>
+</div>
+<span class="font-headline-md text-on-surface mb-2" data-i18n="contact_instagram">Instagram</span>
+<span class="font-body-md text-warm-gray" data-i18n="contact_instagram_desc">Social Media</span>
+</a>
+</div>
+<!-- Identity Detail -->
+<div class="mt-24 pt-12 border-t border-light-pink-border flex flex-col items-center">
+<div class="relative w-20 h-20 mb-6">
+<img class="rounded-full object-cover w-full h-full border-4 border-white shadow-lg" data-alt="A professional and elegant portrait of Selvya Mulyaningtyas, a female software engineer, against a soft-focus minimalist background. She has a warm, approachable expression. The lighting is soft and airy, consistent with a high-end academic and technical portfolio aesthetic. The overall color palette is dominated by soft pinks, whites, and subtle rose gold accents." src="assets/images/sel1.jpeg">
+<div class="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 border-2 border-white rounded-full"></div>
+</div>
+<h3 class="font-headline-md text-primary" data-i18n="contact_name">Selvya Mulyaningtyas</h3>
+<p class="font-body-md text-warm-gray max-w-sm" data-i18n="contact_desc">Software Engineer &amp; Data Analyst yang berfokus dalam membangun solusi digital yang efisien.</p>
+</div>
+</div>
+<!-- Decorative Floating Object -->
+<div class="hidden lg:block absolute bottom-12 right-12 animate-float opacity-40">
+<div class="w-32 h-32 border-2 border-secondary-container rounded-[40px] rotate-12"></div>
+</div>
+</main>
+<script src="js/i18n.js"></script>
+<script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobileMenuOverlay');
+            const drawer = document.getElementById('mobileMenuDrawer');
+
+            if (overlay.classList.contains('opacity-0')) {
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                overlay.classList.add('opacity-100');
+                drawer.classList.remove('translate-x-full');
+                drawer.classList.add('translate-x-0');
+                document.body.style.overflow = 'hidden';
+            } else {
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                overlay.classList.remove('opacity-100');
+                drawer.classList.add('translate-x-full');
+                drawer.classList.remove('translate-x-0');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function updateMobileLangIndicator() {
+            const lang = localStorage.getItem('lang') || 'id';
+            const indicator = document.getElementById('mobileLangIndicator');
+            if (indicator) {
+                indicator.textContent = lang.toUpperCase();
+            }
+        }
+
+        window.addEventListener('languageChanged', () => {
+            updateMobileLangIndicator();
+        });
+
+        document.addEventListener('DOMContentLoaded', updateMobileLangIndicator);
+
+        // Micro-interaction for link hover sounds or tracking could go here
+        document.querySelectorAll('a').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                // Potential for lightweight haptic feedback simulation
+            });
+        });
+
+        // Simple smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<style>
+        @media (max-width: 767px) {
+            .font-headline-xl {
+                font-size: 32px !important;
+                line-height: 1.15 !important;
+            }
+            .text-headline-xl {
+                font-size: 32px !important;
+            }
+            .text-headline-lg {
+                font-size: 26px !important;
+            }
+            .font-headline-lg {
+                font-size: 26px !important;
+            }
+            .text-headline-md {
+                font-size: 18px !important;
+            }
+            .font-headline-md {
+                font-size: 18px !important;
+            }
+            .text-body-lg {
+                font-size: 15px !important;
+            }
+            .font-body-lg {
+                font-size: 15px !important;
+            }
+            .text-body-md {
+                font-size: 14px !important;
+            }
+            .font-body-md {
+                font-size: 14px !important;
+            }
+            .text-xl.md\:text-2xl {
+                font-size: 1rem !important;
+                word-break: break-all;
+            }
+            .p-8 {
+                padding: 1.25rem !important;
+            }
+            .rounded-\[32px\] {
+                border-radius: 1rem !important;
+            }
+        }
+        html {
+            overflow-x: hidden;
+        }
+        @media (max-width: 767px) {
+            button, a, .btn {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+    </style>
+
+</body></html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html><html class="light" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport">
+<title>Selvya Mulyaningtyas | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#c6b9be",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#ffb1c1",
+                    "on-secondary-fixed": "#3f0017",
+                    "inverse-primary": "#ffb1c3",
+                    "surface-tint": "#894c5c",
+                    "tertiary": "#665c60",
+                    "primary": "#894c5c",
+                    "hover-rose": "#D4607A",
+                    "on-primary-fixed": "#380a1a",
+                    "on-error-container": "#93000a",
+                    "secondary": "#984258",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#eddfe4",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#fd94ac",
+                    "on-secondary-container": "#782a40",
+                    "light-pink-border": "#FADDE1",
+                    "outline": "#847376",
+                    "inverse-on-surface": "#f3f0f0",
+                    "surface-dim": "#dcd9d9",
+                    "tertiary-fixed-dim": "#d1c3c8",
+                    "warm-gray": "#7A7A7A",
+                    "on-surface": "#1b1c1c",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f6f3f2",
+                    "outline-variant": "#d6c1c5",
+                    "on-primary-container": "#733949",
+                    "on-secondary-fixed-variant": "#7a2b41",
+                    "surface-container-highest": "#e4e2e1",
+                    "on-tertiary-fixed": "#211a1d",
+                    "surface": "#fcf9f8",
+                    "on-primary-fixed-variant": "#6e3545",
+                    "background": "#fcf9f8",
+                    "surface-container": "#f0eded",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#ffd9df",
+                    "primary-fixed-dim": "#ffb1c3",
+                    "primary-fixed": "#ffd9e0",
+                    "on-background": "#1b1c1c",
+                    "primary-container": "#f4a7b9",
+                    "inverse-surface": "#303030",
+                    "on-tertiary-fixed-variant": "#4e4448",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#524346",
+                    "surface-bright": "#fcf9f8",
+                    "on-tertiary-container": "#53494d",
+                    "surface-variant": "#e4e2e1",
+                    "surface-white": "#FFFFFF"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "stack-gap": "1rem",
+                    "section-padding-mobile": "64px",
+                    "section-padding-desktop": "120px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "label-sm": ["Inter"],
+                    "headline-xl-mobile": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["44px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-sm": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-xl-mobile": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background: linear-gradient(135deg, #fcf9f8 0%, #FFF0F5 100%);
+            overflow-x: hidden;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+                .glass-nav {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+                .lang-btn:hover .lang-indicator {
+            transform: scale(1.1);
+        }
+        .typewriter-cursor {
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        /* Mobile responsive adjustments */
+        @media (max-width: 767px) {
+            .font-headline-xl {
+                font-size: 32px !important;
+                line-height: 1.15 !important;
+            }
+            .text-headline-xl {
+                font-size: 32px !important;
+            }
+            .text-headline-lg {
+                font-size: 26px !important;
+            }
+            .font-headline-lg {
+                font-size: 26px !important;
+            }
+            .text-headline-md {
+                font-size: 18px !important;
+            }
+            .font-headline-md {
+                font-size: 18px !important;
+            }
+            .text-body-lg {
+                font-size: 15px !important;
+ }
+            .font-body-lg {
+                font-size: 15px !important;
+            }
+            .text-body-md {
+                font-size: 14px !important;
+            }
+            .font-body-md {
+                font-size: 14px !important;
+            }
+        }
+        /* Prevent horizontal scroll */
+        html {
+            overflow-x: hidden;
+        }
+        /* Improve touch targets on mobile */
+        @media (max-width: 767px) {
+            button, a, .btn {
+                min-height: 44px;
+                min-width: 44px;
+            }
+            .nav-links a {
+                min-height: 48px;
+            }
+        }
+    </style>
+</head>
+<body class="text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Mobile Header -->
+<header class="md:hidden fixed top-0 left-0 right-0 z-50 glass-nav border-b border-light-pink-border">
+<div class="flex items-center justify-between px-4 py-3">
+<a href="index.html" class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">face</span>
+<span class="font-headline-md text-headline-md text-primary">Selvya</span>
+</a>
+<button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-light-pink-border/30 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">menu</span>
+</button>
+</div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobileMenuOverlay" class="md:hidden fixed inset-0 z-40 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300" onclick="toggleMobileMenu()"></div>
+
+<!-- Mobile Menu Drawer -->
+<div id="mobileMenuDrawer" class="md:hidden fixed right-0 top-0 bottom-0 w-72 bg-surface-white z-50 transform translate-x-full transition-transform duration-300 shadow-2xl">
+<div class="flex flex-col p-6">
+<div class="flex items-center justify-between mb-8">
+<span class="font-headline-md text-headline-md text-primary">Menu</span>
+<button onclick="toggleMobileMenu()" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-light-pink-border/30 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary-container text-on-primary-container" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-body-lg text-body-lg">Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="about.html">
+<span class="material-symbols-outlined">person</span>
+<span class="font-body-lg text-body-lg">About</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="experience.html">
+<span class="material-symbols-outlined">work</span>
+<span class="font-body-lg text-body-lg">Experience</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="projects.html">
+<span class="material-symbols-outlined">code</span>
+<span class="font-body-lg text-body-lg">Projects</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="skills.html">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-body-lg text-body-lg">Skills</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="contact.html">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-body-lg text-body-lg">Contact</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-light-pink-border">
+<button id="mobileLangToggle" onclick="toggleLanguage(); toggleMobileMenu();" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors w-full">
+<span class="material-symbols-outlined">translate</span>
+<span class="font-body-lg text-body-lg">Language:<span id="mobileLangIndicator">ID</span></span>
+</button>
+</div>
+</div>
+</div>
+
+<!-- Fixed Side Navigation Shell (Desktop Only) -->
+<nav class="hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 flex flex-col items-center py-4 px-3 glass-nav rounded-full border border-light-pink-border shadow-[0_10px_30px_rgba(244,167,185,0.15)] z-50">
+<div class="flex flex-col items-center gap-3">
+<!-- Language Toggle Button -->
+<button id="langToggle" onclick="toggleLanguage()" class="lang-btn relative flex items-center justify-center w-10 h-10 rounded-full bg-primary-container text-on-primary-container transition-all duration-300 hover:scale-110 hover:bg-primary hover:text-white" title="Switch Language">
+<span class="material-symbols-outlined text-lg">translate</span>
+<span id="langIndicator" class="lang-indicator absolute -bottom-1 -right-1 text-[8px] font-bold bg-primary text-white w-5 h-5 rounded-full flex items-center justify-center transition-transform">ID</span>
+</button>
+
+<!-- Navigation Cluster -->
+<div class="flex flex-col gap-5">
+<!-- Home (Active) -->
+<a class="flex items-center justify-center w-10 h-10 rounded-full bg-light-pink-border text-primary transition-all duration-300 hover:scale-110 active:scale-95 group" href="index.html" title="Home">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+</a>
+<!-- About -->
+<a class="flex items-center justify-center w-10 h-10 rounded-full text-on-surface-variant transition-all duration-200 hover:text-primary hover:bg-light-pink-border/30 hover:scale-110 active:scale-95" href="about.html" title="About">
+<span class="material-symbols-outlined">person</span>
+</a>
+<!-- Experience -->
+<a class="flex items-center justify-center w-10 h-10 rounded-full text-on-surface-variant transition-all duration-200 hover:text-primary hover:bg-light-pink-border/30 hover:scale-110 active:scale-95" href="experience.html" title="Experience">
+<span class="material-symbols-outlined">work</span>
+</a>
+<!-- Projects -->
+<a class="flex items-center justify-center w-10 h-10 rounded-full text-on-surface-variant transition-all duration-200 hover:text-primary hover:bg-light-pink-border/30 hover:scale-110 active:scale-95" href="projects.html" title="Projects">
+<span class="material-symbols-outlined">code</span>
+</a>
+<!-- Skills -->
+<a class="flex items-center justify-center w-10 h-10 rounded-full text-on-surface-variant transition-all duration-200 hover:text-primary hover:bg-light-pink-border/30 hover:scale-110 active:scale-95" href="skills.html" title="Skills">
+<span class="material-symbols-outlined">analytics</span>
+</a>
+<!-- Contact -->
+<a class="flex items-center justify-center w-10 h-10 rounded-full text-on-surface-variant transition-all duration-200 hover:text-primary hover:bg-light-pink-border/30 hover:scale-110 active:scale-95" href="contact.html" title="Contact">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="ml-0 md:ml-20 min-h-screen relative overflow-hidden">
+<!-- Background Ambient Element (Shader Style) -->
+<div class="absolute top-0 right-0 w-2/3 h-full opacity-30 pointer-events-none">
+</div>
+<!-- Hero Section -->
+<section class="relative w-full min-h-screen flex items-center px-4 md:px-24 pt-20 md:pt-0" id="home">
+<div class="container mx-auto grid grid-cols-1 md:grid-cols-12 items-center gap-6 md:gap-gutter">
+<!-- Left Content Column -->
+<div class="md:col-span-7 flex flex-col gap-6 md:gap-8 z-10 order-2 md:order-1">
+<div class="space-y-3 md:space-y-4">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface leading-tight">
+<span data-i18n="home_greeting">Halo, Saya</span><br>
+<span class="text-primary">Selvya<br class="md:hidden">Mulyaningtyas</span><br>
+</h1>
+<h2 class="font-headline-md text-headline-md text-secondary-fixed-dim border-l-4 border-primary pl-4">
+<span class="typewriter" id="typewriter-text">Software Engineer | Data Analyst</span><span class="typewriter-cursor">|</span>
+</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed" data-i18n="home_description">
+Sebagai lulusan Teknik Informatika, saya memiliki minat dalam pengembangan perangkat lunak, analisis data, dan Machine Learning. Saya senang mempelajari teknologi baru serta menerapkannya untuk membantu menyelesaikan berbagai permasalahan secara efektif. Melalui pengalaman akademik, proyek, dan program pelatihan yang saya ikuti, saya terus mengembangkan kemampuan teknis, berpikir analitis, dan problem solving untuk menciptakan solusi teknologi yang bermanfaat.
+</p>
+<div class="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 pt-2">
+<a class="px-6 md:px-8 py-3 md:py-4 bg-primary text-on-primary rounded-full font-label-sm text-label-sm shadow-[0_10px_20px_rgba(137,76,92,0.3)] hover:bg-hover-rose hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 group" href="assets/Files/CV_Selvy.pdf" download="CV_Selvy.pdf">
+<span data-i18n="home_download_cv">Download CV</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-y-1 transition-transform">download</span>
+</a>
+<a class="px-6 md:px-8 py-3 md:py-4 border-2 border-primary text-primary rounded-full font-label-sm text-label-sm hover:bg-light-pink-border transition-all duration-300 flex items-center justify-center gap-2" href="contact.html">
+<span data-i18n="home_contact_me">Hubungi Saya</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Right Portrait Column -->
+<div class="md:col-span-5 relative flex justify-center items-center order-1 md:order-2">
+<div class="relative w-full max-w-[280px] md:max-w-md aspect-[4/5]">
+<!-- Decorative Tech Elements -->
+<div class="absolute -top-8 -right-4 w-16 h-16 bg-primary-container/30 rounded-lg rotate-12 flex items-center justify-center backdrop-blur-sm border border-primary/20">
+<span class="material-symbols-outlined text-primary/60 text-2xl">{ }</span>
+</div>
+<div class="absolute top-1/4 -left-6 w-12 h-12 bg-secondary-container/30 rounded-full flex items-center justify-center backdrop-blur-sm border border-secondary/20">
+<span class="material-symbols-outlined text-secondary/60 text-xl">code</span>
+</div>
+<div class="absolute bottom-1/4 -right-4 w-14 h-14 bg-primary-container/30 rounded-lg -rotate-6 flex items-center justify-center backdrop-blur-sm border border-primary/20">
+<span class="material-symbols-outlined text-primary/60 text-2xl"></></span>
+</div>
+<div class="absolute -bottom-4 left-1/4 w-10 h-10 bg-secondary-container/30 rounded-full flex items-center justify-center backdrop-blur-sm border border-secondary/20">
+<span class="material-symbols-outlined text-secondary/60 text-lg">terminal</span>
+</div>
+<div class="absolute top-1/2 -left-8 w-8 h-8 bg-primary/10 rounded rotate-45"></div>
+<div class="absolute bottom-8 right-4 w-6 h-6 bg-secondary/10 rounded-full"></div>
+<!-- Binary Code Decoration -->
+<div class="absolute -top-4 left-1/3 text-primary/20 font-mono text-xs tracking-widest">10101</div>
+<div class="absolute bottom-12 -right-2 text-secondary/20 font-mono text-xs tracking-widest">01001</div>
+<!-- Portrait Image Container -->
+<div class="relative w-full h-full rounded-[2rem] overflow-hidden shadow-[0_30px_60px_rgba(244,167,185,0.25)] border-8 border-surface-white">
+<img alt="Selvya Mulyaningtyas Portrait" class="w-full h-full object-cover" src="assets/images/sel3.jpeg">
+<!-- Overlay Gradient -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="min-h-screen py-16 md:py-section-padding-desktop px-4 md:px-24" id="about">
+<div class="container mx-auto">
+<div class="max-w-4xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-gap" data-i18n="about_section_title">Tentang Saya</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed" data-i18n="about_section_desc">
+Sebagai lulusan dengan minat besar dalam teknologi, saya memfokuskan karir saya pada persimpangan antara rekayasa perangkat lunak dan analisis data. Saya percaya bahwa data adalah bahan bakar, dan perangkat lunak adalah mesin yang menggerakkan inovasi modern.
+</p>
+<!-- Grid for Highlights (Bento-lite) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+<div class="p-4 md:p-8 bg-surface-white rounded-2xl md:rounded-3xl shadow-[0_10px_30px_rgba(244,167,185,0.1)] border border-light-pink-border hover:shadow-2xl transition-all duration-300">
+<div class="w-10 h-10 md:w-12 md:h-12 bg-primary-container rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 text-on-primary-container">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2" data-i18n="home_bento_software_title">Software Engineering</h3>
+<p class="text-on-surface-variant text-sm md:text-base" data-i18n="home_bento_software_desc">Membangun arsitektur backend yang skalabel dan frontend yang intuitif menggunakan framework modern.</p>
+</div>
+<div class="p-4 md:p-8 bg-surface-white rounded-2xl md:rounded-3xl shadow-[0_10px_30px_rgba(244,167,185,0.1)] border border-light-pink-border hover:shadow-2xl transition-all duration-300">
+<div class="w-10 h-10 md:w-12 md:h-12 bg-secondary-container rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-6 text-on-secondary-container">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2" data-i18n="home_bento_data_title">Data Analytics</h3>
+<p class="text-on-surface-variant text-sm md:text-base" data-i18n="home_bento_data_desc">Mengolah dataset kompleks menjadi visualisasi yang bermakna untuk pengambilan keputusan strategis.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script src="js/i18n.js"></script>
+<script>
+        // Typewriter animation
+        const roles = [
+            { id: "Software Engineer", en: "Software Engineer" },
+            { id: "Data Analyst", en: "Data Analyst" }
+        ];
+        let currentRoleIndex = 0;
+        let currentCharIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 80;
+
+        function updateRoleText() {
+            const currentLang = localStorage.getItem('lang') || 'id';
+            const role = roles[currentRoleIndex][currentLang] || roles[currentRoleIndex]['id'];
+            const typewriterEl = document.getElementById('typewriter-text');
+
+            if (!typewriterEl) return;
+
+            if (!isDeleting) {
+                typewriterEl.textContent = role.substring(0, currentCharIndex + 1);
+                currentCharIndex++;
+                typingSpeed = 80;
+                if (currentCharIndex === role.length) {
+                    isDeleting = true;
+                    typingSpeed = 1500;
+                }
+            } else {
+                typewriterEl.textContent = role.substring(0, currentCharIndex - 1);
+                currentCharIndex--;
+                typingSpeed = 50;
+                if (currentCharIndex === 0) {
+                    isDeleting = false;
+                    currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+                    typingSpeed = 300;
+                }
+            }
+            setTimeout(updateRoleText, typingSpeed);
+        }
+
+        // Initialize typewriter after page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(updateRoleText, 500);
+        });
+
+        // Update typewriter when language changes
+        window.addEventListener('languageChanged', () => {
+            currentCharIndex = 0;
+            isDeleting = false;
+        });
+    </script>
+<script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobileMenuOverlay');
+            const drawer = document.getElementById('mobileMenuDrawer');
+
+            if (overlay.classList.contains('opacity-0')) {
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                overlay.classList.add('opacity-100');
+                drawer.classList.remove('translate-x-full');
+                drawer.classList.add('translate-x-0');
+                document.body.style.overflow = 'hidden';
+            } else {
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                overlay.classList.remove('opacity-100');
+                drawer.classList.add('translate-x-full');
+                drawer.classList.remove('translate-x-0');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Update mobile language indicator
+        function updateMobileLangIndicator() {
+            const lang = localStorage.getItem('lang') || 'id';
+            const indicator = document.getElementById('mobileLangIndicator');
+            if (indicator) {
+                indicator.textContent = lang.toUpperCase();
+            }
+        }
+
+        // Listen for language changes
+        window.addEventListener('languageChanged', () => {
+            updateMobileLangIndicator();
+        });
+
+        // Initialize mobile lang indicator on load
+        document.addEventListener('DOMContentLoaded', updateMobileLangIndicator);
+
+        // Micro-interaction for sidebar hover
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                // Subtle feedback if needed
+            });
+        });
+
+        // Simple scroll progress indicator (custom addition)
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            // You could apply this to a bar at the top if needed
+        });
+    </script>
+</body></html>

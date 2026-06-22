@@ -1,0 +1,436 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport">
+<title>Featured Projects | Selvya Mulyaningtyas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#c6b9be",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#ffb1c1",
+                    "on-secondary-fixed": "#3f0017",
+                    "inverse-primary": "#ffb1c3",
+                    "surface-tint": "#894c5c",
+                    "tertiary": "#665c60",
+                    "primary": "#894c5c",
+                    "hover-rose": "#D4607A",
+                    "on-primary-fixed": "#380a1a",
+                    "on-error-container": "#93000a",
+                    "secondary": "#984258",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#eddfe4",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#fd94ac",
+                    "on-secondary-container": "#782a40",
+                    "light-pink-border": "#FADDE1",
+                    "outline": "#847376",
+                    "inverse-on-surface": "#f3f0f0",
+                    "surface-dim": "#dcd9d9",
+                    "tertiary-fixed-dim": "#d1c3c8",
+                    "warm-gray": "#7A7A7A",
+                    "on-surface": "#1b1c1c",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f6f3f2",
+                    "outline-variant": "#d6c1c5",
+                    "on-primary-container": "#733949",
+                    "on-secondary-fixed-variant": "#7a2b41",
+                    "surface-container-highest": "#e4e2e1",
+                    "on-tertiary-fixed": "#211a1d",
+                    "surface": "#fcf9f8",
+                    "on-primary-fixed-variant": "#6e3545",
+                    "background": "#fcf9f8",
+                    "surface-container": "#f0eded",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#ffd9df",
+                    "primary-fixed-dim": "#ffb1c3",
+                    "primary-fixed": "#ffd9e0",
+                    "on-background": "#1b1c1c",
+                    "primary-container": "#f4a7b9",
+                    "inverse-surface": "#303030",
+                    "on-tertiary-fixed-variant": "#4e4448",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#eae7e7",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#524346",
+                    "surface-bright": "#fcf9f8",
+                    "on-tertiary-container": "#53494d",
+                    "surface-variant": "#e4e2e1",
+                    "surface-white": "#FFFFFF"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "stack-gap": "1rem",
+                    "section-padding-mobile": "64px",
+                    "section-padding-desktop": "120px",
+                    "gutter": "24px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "label-sm": ["Inter"],
+                    "headline-xl-mobile": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["44px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-sm": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-xl-mobile": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f8;
+            color: #1b1c1c;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .project-card:hover .project-description {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .project-description {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .custom-shadow {
+            shadow-[4px_0_20px_rgba(244,167,185,0.15)];
+        }
+        .lang-btn:hover .lang-indicator {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- Mobile Header -->
+<header class="md:hidden fixed top-0 left-0 right-0 z-50 glass-nav border-b border-light-pink-border">
+<div class="flex items-center justify-between px-4 py-3">
+<a href="index.html" class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">face</span>
+<span class="font-headline-md text-headline-md text-primary">Selvya</span>
+</a>
+<button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-light-pink-border/30 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">menu</span>
+</button>
+</div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobileMenuOverlay" class="md:hidden fixed inset-0 z-40 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300" onclick="toggleMobileMenu()"></div>
+
+<!-- Mobile Menu Drawer -->
+<div id="mobileMenuDrawer" class="md:hidden fixed right-0 top-0 bottom-0 w-72 bg-surface-white z-50 transform translate-x-full transition-transform duration-300 shadow-2xl">
+<div class="flex flex-col p-6">
+<div class="flex items-center justify-between mb-8">
+<span class="font-headline-md text-headline-md text-primary">Menu</span>
+<button onclick="toggleMobileMenu()" class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-light-pink-border/30 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="font-body-lg text-body-lg">Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="about.html">
+<span class="material-symbols-outlined">person</span>
+<span class="font-body-lg text-body-lg">About</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="experience.html">
+<span class="material-symbols-outlined">work</span>
+<span class="font-body-lg text-body-lg">Experience</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-light-pink-border text-primary" href="projects.html">
+<span class="material-symbols-outlined">code</span>
+<span class="font-body-lg text-body-lg">Projects</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="skills.html">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-body-lg text-body-lg">Skills</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors" href="contact.html">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-body-lg text-body-lg">Contact</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-light-pink-border">
+<button id="mobileLangToggle" onclick="toggleLanguage(); toggleMobileMenu();" class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-light-pink-border/30 text-on-surface-variant transition-colors w-full">
+<span class="material-symbols-outlined">translate</span>
+<span class="font-body-lg text-body-lg">Language:<span id="mobileLangIndicator">ID</span></span>
+</button>
+</div>
+</div>
+</div>
+
+<!-- Shared SideNavBar Component (Desktop Only) -->
+<aside class="hidden md:flex fixed left-6 top-1/2 -translate-y-1/2 flex flex-col items-center py-4 px-3 bg-surface/80 backdrop-blur-md border border-light-pink-border rounded-full shadow-[0_10px_30px_rgba(244,167,185,0.15)] z-50">
+<div class="flex flex-col items-center gap-3">
+<!-- Language Toggle Button -->
+<button id="langToggle" onclick="toggleLanguage()" class="lang-btn relative flex items-center justify-center w-10 h-10 rounded-full bg-primary-container text-on-primary-container transition-all duration-300 hover:scale-110 hover:bg-primary hover:text-white" title="Switch Language">
+<span class="material-symbols-outlined text-lg">translate</span>
+<span id="langIndicator" class="lang-indicator absolute -bottom-1 -right-1 text-[8px] font-bold bg-primary text-white w-5 h-5 rounded-full flex items-center justify-center transition-transform">ID</span>
+</button>
+
+<div class="flex flex-col gap-5">
+<!-- Home -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-300 hover:scale-110" href="index.html">
+<span class="material-symbols-outlined">home</span>
+</a>
+<!-- About -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-300 hover:scale-110" href="about.html">
+<span class="material-symbols-outlined">person</span>
+</a>
+<!-- Experience -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-300 hover:scale-110" href="experience.html">
+<span class="material-symbols-outlined">work</span>
+</a>
+<!-- Code (Active for Projects) -->
+<a class="flex items-center justify-center w-10 h-10 rounded-full bg-light-pink-border text-primary transition-all duration-300 hover:scale-110" href="projects.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">code</span>
+</a>
+<!-- Skills -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-300 hover:scale-110" href="skills.html">
+<span class="material-symbols-outlined">analytics</span>
+</a>
+<!-- Contact -->
+<a class="flex items-center justify-center w-10 h-10 text-on-surface-variant hover:text-primary transition-all duration-300 hover:scale-110" href="contact.html">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-0 md:ml-20 min-h-screen px-4 md:px-gutter lg:px-24 py-12 pt-20 md:pt-12">
+<!-- Header Section -->
+<header class="mb-16 text-center">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-surface" data-i18n="proj_title">
+                Featured Projects
+            </h1>
+</header>
+<!-- Projects Grid (2x2) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Project 1: HOTRIP -->
+<article class="project-card group relative bg-surface-white rounded-xl shadow-[0_20px_40px_rgba(244,167,185,0.1)] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(244,167,185,0.2)]">
+<div class="h-80 overflow-hidden relative">
+<img class="w-full h-full object-cover" src="assets/images/HOTRIP.png">
+</div>
+<div class="p-8">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">Jupyter Notebook</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">TensorFlow</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">PostgreSQL</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">Kotlin</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2" data-i18n="proj_1_title">HOTRIP</h3>
+<p class="project-description text-body-md text-on-surface-variant" data-i18n="proj_1_desc">
+                        HOTRIP is aplication mobile that clustering allows the system to group travelers with similar preferences based on interests in tourism types (nature, culture, culinary, etc.), group destinations based on characteristics, and clustering results can be the basis for personalization, as recommendations are given based on patterns that emerge from specific groups of travelers or destinations.
+                    </p>
+</div>
+</article>
+<!-- Project 2: Sistem Absensi QR & Face ID -->
+<article class="project-card group relative bg-surface-white rounded-xl shadow-[0_20px_40px_rgba(244,167,185,0.1)] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(244,167,185,0.2)]">
+<div class="h-80 overflow-hidden relative">
+<img class="w-full h-full object-cover" src="assets/images/sistem absensi.png">
+</div>
+<div class="p-8">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">PHP</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">Laravel</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">JavaScript</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">Bootstrap</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">MYSQL</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2" data-i18n="proj_2_title">Employee Attendance Information System Based on QR Code and Location Validation</h3>
+<p class="project-description text-body-md text-on-surface-variant" data-i18n="proj_2_desc">
+                       This system is designed to simplify the process of recording employee attendance digitally through QR Code scanning integrated with GPS-based location validation. The system verifies the employee's location and ensures that attendance can only be recorded within a predefined radius of the workplace. With these features, the attendance process becomes faster, more accurate, and helps improve employee discipline while enhancing transparency in attendance data management.
+</p>
+</article>
+<!-- Project 3: SPK Pemilihan Sunscreen -->
+<article class="project-card group relative bg-surface-white rounded-xl shadow-[0_20px_40px_rgba(244,167,185,0.1)] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(244,167,185,0.2)]">
+<div class="h-80 overflow-hidden relative">
+<img class="w-full h-full object-cover" src="assets/images/spk sunscreen.png">
+</div>
+<div class="p-8">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">PHP</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">SMART</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">ROC</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">Laravel</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">MYSQL</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2" data-i18n="proj_3_title">Decision Support System for Sunscreen Selection Based on Skin Type</h3>
+<p class="project-description text-body-md text-on-surface-variant" data-i18n="proj_3_desc">
+                        A web-based decision support system designed to help users choose suitable sunscreen products according to their skin type and relevant criteria. The system evaluates alternatives using a structured decision-making approach to provide more objective and personalized recommendations.
+                    </p>
+</div>
+</article>
+<!-- Project 4: Vending Machine Data Analysis -->
+<a href="https://km24-deployment-medan-team4.vercel.app" target="_blank" class="block">
+<article class="project-card group relative bg-surface-white rounded-xl shadow-[0_20px_40px_rgba(244,167,185,0.1)] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(244,167,185,0.2)]">
+<div class="h-80 overflow-hidden relative">
+<img class="w-full h-full object-cover" src="assets/images/vending machine.png">
+</div>
+<div class="p-8">
+<div class="flex flex-wrap gap-2 mb-4">
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">HTML</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">CSS</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">JavaScript</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">jQuery</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">DataTables</span>
+<span class="px-3 py-1 bg-light-pink-border text-on-secondary-container text-label-sm font-label-sm rounded-full">Chart.js</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2" data-i18n="proj_4_title">Vending Machine Analysis</h3>
+<p class="project-description text-body-md text-on-surface-variant" data-i18n="proj_4_desc">
+                        Vending Machine Sales is a website creation that is created based on Vending Machine Sales data which has been previously processed in the Data Analyst vertical.
+</p>
+</div>
+</article>
+</a>
+</section>
+<!-- CTA / Footer Replacement -->
+<div class="mt-24 pt-12 border-t border-light-pink-border flex flex-col md:flex-row items-center justify-between gap-8">
+</main>
+<script src="js/i18n.js"></script>
+<script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobileMenuOverlay');
+            const drawer = document.getElementById('mobileMenuDrawer');
+
+            if (overlay.classList.contains('opacity-0')) {
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                overlay.classList.add('opacity-100');
+                drawer.classList.remove('translate-x-full');
+                drawer.classList.add('translate-x-0');
+                document.body.style.overflow = 'hidden';
+            } else {
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                overlay.classList.remove('opacity-100');
+                drawer.classList.add('translate-x-full');
+                drawer.classList.remove('translate-x-0');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function updateMobileLangIndicator() {
+            const lang = localStorage.getItem('lang') || 'id';
+            const indicator = document.getElementById('mobileLangIndicator');
+            if (indicator) {
+                indicator.textContent = lang.toUpperCase();
+            }
+        }
+
+        window.addEventListener('languageChanged', () => {
+            updateMobileLangIndicator();
+        });
+
+        document.addEventListener('DOMContentLoaded', updateMobileLangIndicator);
+
+        // Micro-interaction for project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mousedown', () => {
+                card.style.transform = 'scale(0.98) translateY(-4px)';
+            });
+            card.addEventListener('mouseup', () => {
+                card.style.transform = 'scale(1) translateY(-8px)';
+            });
+        });
+
+        // Sticky progress bar at the top (from style guidance)
+        const progressBar = document.createElement('div');
+        progressBar.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #984258;
+            z-index: 100;
+            transition: width 0.1s ease-out;
+        `;
+        document.body.appendChild(progressBar);
+
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            progressBar.style.width = scrolled + "%";
+        });
+    </script>
+<style>
+        @media (max-width: 767px) {
+            .font-headline-xl {
+                font-size: 32px !important;
+                line-height: 1.15 !important;
+            }
+            .text-headline-xl {
+                font-size: 32px !important;
+            }
+            .text-headline-lg {
+                font-size: 26px !important;
+            }
+            .font-headline-lg {
+                font-size: 26px !important;
+            }
+            .text-headline-md {
+                font-size: 18px !important;
+            }
+            .font-headline-md {
+                font-size: 18px !important;
+            }
+            .text-body-lg {
+                font-size: 15px !important;
+            }
+            .font-body-lg {
+                font-size: 15px !important;
+            }
+            .text-body-md {
+                font-size: 14px !important;
+            }
+            .font-body-md {
+                font-size: 14px !important;
+            }
+            .project-card .h-80 {
+                height: 200px !important;
+            }
+            .project-card .p-8 {
+                padding: 1rem !important;
+            }
+        }
+        html {
+            overflow-x: hidden;
+        }
+        @media (max-width: 767px) {
+            button, a, .btn {
+                min-height: 44px;
+                min-width: 44px;
+            }
+        }
+    </style>
+
+
+</body></html>
